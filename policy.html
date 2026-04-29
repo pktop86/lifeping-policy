@@ -1,215 +1,153 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>LifePing Privacy Policy</title>
+
 <style>
 body { font-family: Arial, sans-serif; line-height: 1.7; padding: 40px; max-width: 900px; margin: auto; color:#222; }
 h1 { margin-top: 48px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
 h2 { margin-top: 28px; color: #333; }
 .notice { background:#f7f9fc; padding:16px; border-radius:12px; }
+.lang { display:none; }
 </style>
+
+<script>
+function detectLanguage() {
+  const lang = navigator.language || navigator.userLanguage;
+
+  if (lang.startsWith('ko')) show('ko');
+  else if (lang.startsWith('ja')) show('ja');
+  else if (lang.startsWith('de')) show('de');
+  else show('en');
+}
+
+function show(lang) {
+  document.querySelectorAll('.lang').forEach(el => el.style.display='none');
+  document.getElementById(lang).style.display='block';
+}
+</script>
 </head>
-<body>
+
+<body onload="detectLanguage()">
+
+<!-- ===================== KOREAN ===================== -->
+<div id="ko" class="lang">
 
 <h1>LifePing 개인정보처리방침</h1>
+<p class="notice">LifePing은 이용자의 개인정보를 중요하게 생각하며 관련 법령을 준수합니다.</p>
 
-<p class="notice">LifePing은 이용자의 개인정보를 중요하게 생각하며, 관련 법령을 준수합니다.</p>
-
-<h2>1. 수집하는 개인정보</h2>
+<h2>1. 수집 정보</h2>
 <ul>
-<li>이름 또는 표시 이름</li>
-<li>전화번호</li>
-<li>자동 연락 대상자의 이름 및 전화번호</li>
-<li>체크인 시간 및 상태 정보</li>
-<li>위치 정보: 사용자가 허용한 경우에만 수집</li>
-<li>기기 정보, 앱 사용 로그, 알림 토큰</li>
-<li>구독 및 결제 상태 정보</li>
+<li>이름, 전화번호</li>
+<li>지인 연락처</li>
+<li>체크인 상태</li>
+<li>위치정보(허용 시)</li>
+<li>기기 및 로그</li>
+<li>구독 상태</li>
 </ul>
 
-<h2>2. 개인정보 이용 목적</h2>
+<h2>2. 이용 목적</h2>
 <ul>
-<li>안부 확인 및 안전 체크 서비스 제공</li>
-<li>체크인 지연 시 알림 및 자동 연락 기능 제공</li>
-<li>사용자 식별 및 계정 관리</li>
-<li>구독 상태 확인 및 유료 기능 제공</li>
-<li>서비스 안정성 개선 및 오류 분석</li>
+<li>안전 체크 및 알림</li>
+<li>자동 연락 기능</li>
+<li>계정 관리</li>
+<li>구독 서비스 제공</li>
 </ul>
 
-<h2>3. 제3자 서비스 이용</h2>
-<p>LifePing은 서비스 제공을 위해 Firebase, Google Play 결제, 문자 발송 제공업체(Solapi 등)를 사용할 수 있습니다. 문자 발송 시 수신자 전화번호와 메시지 내용 일부가 문자 발송 제공업체에 전달될 수 있습니다.</p>
+<h2>3. 제3자</h2>
+<p>Firebase, Google Play, Solapi 사용</p>
 
-<h2>4. 개인정보 보관 기간</h2>
-<p>개인정보는 서비스 이용 기간 동안 보관되며, 사용자의 삭제 요청 또는 탈퇴 시 관련 법령에 따라 필요한 경우를 제외하고 삭제됩니다.</p>
+<h2>4. 보관기간</h2>
+<p>탈퇴 시 즉시 삭제</p>
 
 <h2>5. 보안</h2>
-<p>데이터는 암호화된 통신(HTTPS)을 통해 전송되며, 접근 권한을 제한하여 보호합니다.</p>
+<p>HTTPS 암호화 전송</p>
 
-<h2>6. 이용자의 권리</h2>
+<h2>6. 사용자 권리</h2>
 <ul>
-<li>개인정보 열람, 수정, 삭제 요청</li>
-<li>위치 정보 권한 철회</li>
-<li>서비스 탈퇴 및 데이터 삭제 요청</li>
+<li>삭제 요청 가능</li>
 </ul>
 
-<h2>7. 아동 개인정보</h2>
-<p>LifePing은 법정대리인의 동의 없이 아동의 개인정보를 고의로 수집하지 않습니다.</p>
+<h2>7. 계정 삭제</h2>
+<p>
+앱 설정 또는 이메일로 삭제 요청 가능<br>
+📧 pktop86@gmail.com<br>
+7일 내 완전 삭제
+</p>
 
-<h2>8. 문의</h2>
-<p>개인정보 관련 문의: your@email.com</p>
+</div>
 
-<h2>9. 시행일</h2>
-<p>본 개인정보처리방침은 2026년 4월 29일부터 적용됩니다.</p>
+<!-- ===================== ENGLISH ===================== -->
+<div id="en" class="lang">
 
+<h1>LifePing Privacy Policy</h1>
+<p class="notice">We respect your privacy.</p>
 
-<h1>Privacy Policy (English)</h1>
-
-<p class="notice">LifePing values user privacy and complies with applicable privacy laws.</p>
-
-<h2>1. Information We Collect</h2>
+<h2>1. Data</h2>
 <ul>
-<li>Name or display name</li>
-<li>Phone number</li>
-<li>Names and phone numbers of emergency or alert contacts</li>
-<li>Check-in time and safety status information</li>
-<li>Location data, only when permitted by the user</li>
-<li>Device information, app usage logs, and notification tokens</li>
-<li>Subscription and payment status information</li>
+<li>Name, phone</li>
+<li>Contacts</li>
+<li>Check-in status</li>
+<li>Location (optional)</li>
+<li>Device data</li>
 </ul>
 
-<h2>2. Purpose of Use</h2>
+<h2>2. Purpose</h2>
 <ul>
-<li>Providing safety check and check-in services</li>
-<li>Sending alerts when a user does not respond</li>
-<li>Managing user accounts</li>
-<li>Providing subscription-based features</li>
-<li>Improving service stability and analyzing errors</li>
+<li>Safety service</li>
+<li>Auto alerts</li>
+<li>Account management</li>
 </ul>
 
-<h2>3. Third-Party Services</h2>
-<p>LifePing may use Firebase, Google Play Billing, and SMS providers such as Solapi. When SMS alerts are sent, recipient phone numbers and message content may be processed by the SMS provider.</p>
+<h2>3. Third Party</h2>
+<p>Firebase, Google Play, SMS provider</p>
 
-<h2>4. Data Retention</h2>
-<p>Personal data is retained while the user uses the service and will be deleted upon request or account deletion, unless retention is required by law.</p>
+<h2>4. Retention</h2>
+<p>Deleted upon request</p>
 
 <h2>5. Security</h2>
-<p>Data is transmitted through encrypted HTTPS connections and protected with access controls.</p>
+<p>HTTPS encryption</p>
 
-<h2>6. User Rights</h2>
+<h2>6. Rights</h2>
 <ul>
-<li>Request access, correction, or deletion of personal data</li>
-<li>Withdraw location permission</li>
-<li>Request account and data deletion</li>
+<li>Request deletion</li>
 </ul>
 
-<h2>7. Children’s Privacy</h2>
-<p>LifePing does not knowingly collect personal information from children without appropriate parental or guardian consent.</p>
+<h2>7. Account Deletion</h2>
+<p>
+Request via app or email<br>
+📧 pktop86@gmail.com<br>
+Deleted within 7 days
+</p>
 
-<h2>8. Contact</h2>
-<p>Email: your@email.com</p>
+</div>
 
-<h2>9. Effective Date</h2>
-<p>This Privacy Policy is effective as of April 29, 2026.</p>
+<!-- ===================== JAPANESE ===================== -->
+<div id="ja" class="lang">
 
+<h1>プライバシーポリシー</h1>
 
-<h1>プライバシーポリシー（日本語）</h1>
+<h2>アカウント削除</h2>
+<p>
+アプリまたはメールで削除可能<br>
+📧 pktop86@gmail.com
+</p>
 
-<p class="notice">LifePingは、ユーザーの個人情報を重要に考え、適用される法令を遵守します。</p>
+</div>
 
-<h2>1. 収集する情報</h2>
-<ul>
-<li>氏名または表示名</li>
-<li>電話番号</li>
-<li>自動通知先の氏名および電話番号</li>
-<li>チェックイン時刻および安全確認ステータス</li>
-<li>位置情報：ユーザーが許可した場合のみ収集</li>
-<li>端末情報、アプリ利用ログ、通知トークン</li>
-<li>サブスクリプションおよび決済状態情報</li>
-</ul>
+<!-- ===================== GERMAN ===================== -->
+<div id="de" class="lang">
 
-<h2>2. 利用目的</h2>
-<ul>
-<li>安否確認および安全チェックサービスの提供</li>
-<li>応答が遅れた場合の通知および自動連絡機能の提供</li>
-<li>ユーザーアカウント管理</li>
-<li>有料機能の提供</li>
-<li>サービスの安定性向上およびエラー分析</li>
-</ul>
+<h1>Datenschutzerklärung</h1>
 
-<h2>3. 第三者サービスの利用</h2>
-<p>LifePingは、Firebase、Google Play決済、Solapi等のSMS送信サービスを利用する場合があります。SMS通知を送信する際、受信者の電話番号およびメッセージ内容の一部がSMS送信事業者に処理されることがあります。</p>
+<h2>Kontolöschung</h2>
+<p>
+Löschung per App oder E-Mail<br>
+📧 pktop86@gmail.com
+</p>
 
-<h2>4. 保存期間</h2>
-<p>個人情報はサービス利用期間中保存され、ユーザーからの削除 요청または退会時に、法令上必要な場合を除き削除されます。</p>
-
-<h2>5. セキュリティ</h2>
-<p>データは暗号化されたHTTPS通信を通じて送信され、アクセス制限により保護されます。</p>
-
-<h2>6. ユーザーの権利</h2>
-<ul>
-<li>個人情報の閲覧、修正、削除の 요청</li>
-<li>位置情報権限の撤回</li>
-<li>アカウントおよびデータ削除の 요청</li>
-</ul>
-
-<h2>7. 子どものプライバシー</h2>
-<p>LifePingは、適切な保護者の同意なく、子どもの個人情報を故意に収集しません。</p>
-
-<h2>8. お問い合わせ</h2>
-<p>Email: your@email.com</p>
-
-<h2>9. 施行日</h2>
-<p>本ポリシーは2026年4月29日より適用されます。</p>
-
-
-<h1>Datenschutzerklärung (Deutsch)</h1>
-
-<p class="notice">LifePing nimmt den Schutz personenbezogener Daten ernst und hält die geltenden Datenschutzgesetze ein.</p>
-
-<h2>1. Erhobene Daten</h2>
-<ul>
-<li>Name oder Anzeigename</li>
-<li>Telefonnummer</li>
-<li>Namen und Telefonnummern von Notfall- oder Benachrichtigungskontakten</li>
-<li>Check-in-Zeit und Sicherheitsstatus</li>
-<li>Standortdaten, nur wenn der Nutzer dies erlaubt</li>
-<li>Geräteinformationen, App-Nutzungsprotokolle und Benachrichtigungstoken</li>
-<li>Abonnement- und Zahlungsstatus</li>
-</ul>
-
-<h2>2. Zweck der Verarbeitung</h2>
-<ul>
-<li>Bereitstellung von Sicherheits-Check-in- und Benachrichtigungsdiensten</li>
-<li>Versand von Benachrichtigungen bei ausbleibender Reaktion</li>
-<li>Verwaltung von Nutzerkonten</li>
-<li>Bereitstellung kostenpflichtiger Funktionen</li>
-<li>Verbesserung der Stabilität des Dienstes und Fehleranalyse</li>
-</ul>
-
-<h2>3. Drittanbieter</h2>
-<p>LifePing kann Firebase, Google Play Billing und SMS-Dienstleister wie Solapi nutzen. Beim Versand von SMS-Benachrichtigungen können Telefonnummern der Empfänger und Teile des Nachrichteninhalts durch den SMS-Dienstleister verarbeitet werden.</p>
-
-<h2>4. Speicherdauer</h2>
-<p>Personenbezogene Daten werden während der Nutzung des Dienstes gespeichert und auf Anfrage oder bei Kontolöschung gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
-
-<h2>5. Sicherheit</h2>
-<p>Daten werden über verschlüsselte HTTPS-Verbindungen übertragen und durch Zugriffsbeschränkungen geschützt.</p>
-
-<h2>6. Rechte der Nutzer</h2>
-<ul>
-<li>Auskunft, Berichtigung oder Löschung personenbezogener Daten verlangen</li>
-<li>Standortberechtigungen widerrufen</li>
-<li>Löschung des Kontos und der Daten verlangen</li>
-</ul>
-
-<h2>7. Datenschutz von Kindern</h2>
-<p>LifePing erhebt wissentlich keine personenbezogenen Daten von Kindern ohne angemessene Zustimmung der Eltern oder Erziehungsberechtigten.</p>
-
-<h2>8. Kontakt</h2>
-<p>Email: pktop86@gmail.com</p>
-
-<h2>9. Inkrafttreten</h2>
-<p>Diese Datenschutzerklärung gilt ab dem 29. April 2026.</p>
+</div>
 
 </body>
 </html>
